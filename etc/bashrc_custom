@@ -1,0 +1,24 @@
+export PATH=$PATH:.
+
+alias cdd="cd .."
+alias lsa="ls -A"
+alias lsl="lsl -l"
+alias lsal="ls -Al"
+alias targz=targzfunc
+alias untar=untarfunc
+alias cselab="ssh -p 222 bshartle@129.252.130.019"
+alias trash="mv -t ~/.TRASH"
+alias rmtrash="mv -t ~/.TRASH"
+alias rmtrash="rm -rf ~/.TRASH/*"
+
+function targzfunc() {
+VAR=$1;
+VAR=${VAR%/};
+tar -zcvf "$VAR.tar.gz" ./"$VAR"
+}
+
+function untarfunc() {
+VAR=$1
+VAR=${VAR}
+tar -xvf ./"$VAR"
+}
